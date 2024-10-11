@@ -10,10 +10,6 @@ server = app.server
 
   df = pd.read_csv("/kaggle/input/gdp-of-all-countries19602020/gdp_1960_2020.csv")
 
-df.info()
-df.head()
-df.tail()
-
 subset_2000 = df[df['year'].isin([2000])]
 average_2000 = np.mean(subset_2000['gdp'])
 subset_2010 = df[df['year'].isin([2010])]
