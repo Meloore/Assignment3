@@ -1,12 +1,12 @@
+from dash import Dash, html, dcc, callback, Input, Output
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-import os
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
+app = Dash(__name__, external_stylesheets=[dbc.themes.CERULEAN])
+app.title = "Assignment3"
+server = app.server
 
   df = pd.read_csv("/kaggle/input/gdp-of-all-countries19602020/gdp_1960_2020.csv")
 
